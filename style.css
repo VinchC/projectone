@@ -1,155 +1,59 @@
+:root {
+  --primaire: #FFAD00;
+  --secondaire: black;
+  --terciaire: white;
+}
+
 * {
-  box-sizing: border-box;
-  margin: auto;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   list-style: none;
-  font-style: Alegreya Sans;
 }
 
 body {
-  background-image: url("https://github.com/VinchC/projectone/blob/a75c7687cfecb3fd246627f99b96451ed6b4560a/background.jpg");
-  background-repeat: no-repeat;
+  background-image: url("./background.jpg");
+  background-position: 100%;
+  font-family: Alegreya Sans, Luna Regular, sans-serif;
 }
 
-.navbar {
-  position: fixed;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 40px;
-  align-items: center;
-}
-
-.navbar .logo {
-  font-size: 32px;
-  font-weight: bold;
-  color: #FFAD00;
-}
-
-.navbar a {
-  color: white;
-}
-
-.navbar .nav-links ul {
-  display: flex;
-}
-
-.navbar .nav-links ul li {
-  margin: 0 25px;
-}
-
-.navbar .menu-burger {
-  display: none;
-  position: absolute;
-  right: 50px;
-  top: 50px;
-  width: 60px;
-  height: auto;
-}
-
-
-@media screen and (max-width:1200px) {
-
-  .navbar {
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-  }
-
-  .navbar .titre {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-  }
-
-  section {
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar .menu-burger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.185);
-    backdrop-filter: blur(8px);
-    margin-left: -100%;
-    transition: all 0.5s ease;
-  }
-
-  .nav-links.mobile-menu {
-    margin-left: 0;
-  }
-
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar .nav-links ul li {
-    margin: 20px 0;
-    font-size: 20px;
-  }
-
-
-}
-
-.titre {
-  display: block;
-  justify-content: center;
-  max-width: 40px;
-}
-
-.impair {
-  background-color: #FFAD00;
-}
-
-.pair {
-  background-color: black;
-  color: white;
-}
-
-.pair h2 {
-  color: #FFAD00;
-}
-
-.impair h2 {
-  color: black;
-}
 
 main {
   margin: 0;
   line-height: 1.5;
-  background-color: #FFAD00;
 }
 
-.double {
-  display: block;
-  align-items: center;
+ol {
+  list-style: none;
+  margin-top: 0%;
+  padding: 0%;
+  margin: 0%;
 }
 
-.photo {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
+#portrait {
+  background-color: var(--secondaire);
+  padding: 3%;
+  margin: 5%;
+  margin-top: 10%;
 }
 
-h2 {
-  font-size: 16px;
+.icons ol li {
+  text-align: justify;
+  color: var(--primaire);
+  padding-left: 5%;
+}
+
+
+.impairtitle {
+  color: black;
+  text-align: center;
   font-weight: bold;
-  color: #f87a04;
+}
+
+.pairtitle {
+  color: #FFAD00;
+  text-align: center;
+  font-weight: bold;
 }
 
 section {
@@ -160,47 +64,171 @@ section {
   text-align: justify;
 }
 
-li .progressbar {
+section img {
+  align-items: center;
+  max-width: 100%;
+  max-height: auto;
+  margin: auto;
+}
+
+section ul,
+ul li {
+  padding: 2px;
+}
+
+#logo {
+  align-items: center;
+  max-width: 50%;
+  max-height: auto;
+  margin: auto;
+}
+
+#experience p {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#experience ul li {
+  list-style: circle;
+  text-align: justify;
+  margin-bottom: 3px;
+  color: black;
+  font-size: 11px;
+}
+
+.frontpage {
+  background-color: black;
+  color: #FFAD00;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+  margin: auto;
+}
+
+.impair {
+  background-color: #FFAD00;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+}
+
+.pair {
   background-color: black;
   color: white;
-  border: black;
-  border-radius: 15px;
-  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+}
+
+.pair h2 {
+  color: #FFAD00;
+}
+
+.impair h2 {
+  color: black;
+}
+
+.separateurimpair {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px;
+}
+
+.separateurpair {
+  color: #FFAD00;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px;
 }
 
 footer {
   font-size: 12px;
-  padding: 1rem;
   background-color: black;
   color: white;
   font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-#contact {
-  color: black;
-}
-
-#references {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 58ch;
   text-align: center;
 }
 
-button[type="submit"] {
-  background-color: #fee715ff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+
+@media screen and (min-width:1024px) {
+
+  * {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+    font-family: Alegreya Sans, Luna Regular, sans-serif;
+    font-size: 20px;
+  }
+
+  .double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .icons ol li {
+    font-size: 16px;
+    text-align: justify;
+    color: var(--primaire);
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .titre {
+    display: block;
+    justify-content: center;
+    max-width: 40%;
+    max-height: auto;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 150ch;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  section img {
+    align-items: center;
+    max-width: 80%;
+    max-height: auto;
+    margin: auto;
+  }
+
+  #experience ul li {
+    list-style: circle;
+    text-align: justify;
+    margin-bottom: 3px;
+    color: black;
+    font-size: 16px;
+  }
+
+  .refblock {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .separateurpair {
+    display: none;
+  }
+
+  footer {
+    font-size: 16px;
+    margin-top: 0;
+    max-width: 85ch;
+  }
+
 }
