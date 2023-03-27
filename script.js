@@ -1,16 +1,13 @@
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
+const menuBurger = document.querySelector(".menu-burger");
+const navLinks = document.querySelector(".nav-links");
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
+menuBurger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu');
+});
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  sidenav.classList.add("active");
-}
+var form = document.getElementById("contactform");
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  sidenav.classList.remove("active");
-}
+form.addEventListener("submit", function (event) {
+alert("Merci pour votre message!");
+event.preventDefault();
+});
